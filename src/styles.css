@@ -1,0 +1,584 @@
+:root {
+    --primary-color: #2563eb;
+    --dark-color: #0f172a;   
+    --light-bg: #f1f5f9;     
+    --white: #ffffff;
+    --menu-ativo: #d0dbe7; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--dark-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3%; 
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-portfolio {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;       
+    list-style: none;    
+    gap: 35px;
+    margin-right: 38px;
+}
+
+nav a {
+    border: 1px solid var(--dark-color);
+    border-radius: 5px; ;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+#inicio {
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+}
+
+.foto-perfil {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+#inicio img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin-top: 45px;  
+    margin-bottom: 20px;
+    border: 4px solid var(--white);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--dark-color);
+
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 20px;;
+}
+
+.cabecalho-sub-titulo {
+    font-size: 1.5rem; 
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+.projetos-container {
+    display: flex;            
+    flex-wrap: wrap;          
+    justify-content: center;  
+    gap: 25px;                
+    margin-top: 30px;
+}
+
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);    
+    flex: 1 1 300px;    
+    max-width: 400px;
+    height: 380px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.4s ease;
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px); 
+}
+
+.info-projetos {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    flex: 1;
+}
+
+.info-projetos h3 {
+    width: 100%;
+    text-align: left;
+}  
+
+.info-projetos p {
+    width: 100%;
+    text-align:left;
+}
+
+.botoes-projeto {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 8px;
+}
+/*
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 40px; 
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+*/
+.btn-ver-projeto ,
+.btn-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-ver-projeto {
+    padding: 10px 12px; 
+}
+
+.btn-github {
+    padding: 8px 12px;
+    background: #000;
+}
+
+.btn-ver-projeto:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-github:hover {
+    background-color: #1d4ed8; /* fica mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/*
+.btn-projeto {
+    margin-top: auto;
+}
+*/
+
+form {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;      
+    max-width: 550px;
+    margin: 40px auto;        
+    display: flex;            
+    flex-direction: column;   
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+#contato h2 {
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;       
+}
+
+form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+form input, form textarea {
+    padding: 14px;
+    border: 2px solid #edf2f7;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #f8fafc;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+form button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--dark-color);
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+.redes a {
+
+    margin: 10px;
+    font-size: 32px;
+    transition: 0.3s;
+    color: #5497ed;
+}
+
+/* LinkedIn */
+.redes a:nth-child(1):hover {
+    color: rgb(10, 102, 194);
+}
+
+/* Instagram */
+.redes a:nth-child(2):hover {
+    color: rgb(225, 48, 108)
+}
+
+/* Facebook */
+.redes a:nth-child(3):hover {
+    color: #1877F2;
+}
+/* Discord */
+.redes a:nth-child(4):hover {
+    color: #5865F2;
+}
+
+#menu-hamburguer {
+    display: none;
+}
+
+#btn-topo {
+    position: fixed;
+    bottom: 50px;
+    right: 78px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#btn-topo:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+#btn-tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    font-size: 20px; 
+    cursor: pointer;    
+}
+
+#btn-tema i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(1px); 
+}
+
+#btn-tema:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+body.dark-theme {
+    --light-bg: #0f172a;   
+    --dark-color: #f1f5f9;  
+    --white: #1e293b;      
+    --primary-color: #3b82f6; 
+    --menu-ativo: #1e293b; 
+}
+
+body.dark-theme footer {
+    background-color: #020617;
+    color: #f1f5f9;         
+}
+
+#menu a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-theme #menu a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;      
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .card-projeto {
+        flex-basis: 100%;
+        flex: 1 1 100%;
+        height: 380px;
+    }
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        background: #1e293b;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 90%;
+        max-width: 250px;
+        padding: 20px;  
+    }
+
+    #menu.active {
+        display: flex;
+        align-items: center;
+        background: var(--menu-ativo);
+        margin-top: 42px;
+        padding: 32px;
+        gap: 28px;
+        position: absolute;
+        z-index: 9999;
+    }
+
+    #menu-hamburguer {
+        display: block;
+        font-size: 40px;
+        z-index: 2000;
+        position: relative;
+        right: 12px;
+    }
+    
+    #menu-hamburguer.active {
+        color: white;
+        padding: 32px; 
+    }
+
+    #menu li {
+        width: 100%;
+    }
+
+    #menu a {
+        display: block;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #btn-topo {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    #inicio img {
+       max-width: 250px;
+       height: auto;
+    }
+}
+
+@media (max-width: 568px) {
+    .logo-portfolio {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        margin-right: 38px;
+     }
+
+     #menu-hamburguer {
+        display: block;
+        font-size: 38px;
+        z-index: 2000;
+        position: relative;
+        right: 20px;
+    }
+
+    .btn-ver-projeto {
+        padding: 8px 12px;
+        font-size: 16px;
+        margin-left: 12px;
+    }
+
+    .btn-github {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    .botoes-projeto {
+        gap: 100px;
+    }
+
+
+}
+
+@media (max-width: 450px) {
+    .logo-portfolio {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        margin-right: 58px;
+     }
+
+     #menu-hamburguer {
+        display: block;
+        font-size: 40px;
+        z-index: 2000;
+        position: relative;
+        right: 18px;
+    }
+
+    .btn-ver-projeto {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .btn-github {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .botoes-projeto {
+        gap: 32px;
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}

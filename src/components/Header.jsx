@@ -8,9 +8,16 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   }
 
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
   function toggleTheme() {
-    setDark(!dark);
-    document.body.classList.toggle("dark-theme");
+    setDark((prev) => {
+      const newValue = !prev;
+      document.body.classList.toggle("dark-theme", newValue);
+      return newValue;
+    });
   }
 
   return (
@@ -19,21 +26,36 @@ export default function Header() {
 
       <nav>
         <ul id="menu" className={menuOpen ? "active" : ""}>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a href="#sobre" onClick={closeMenu}>Sobre</a>
+          </li>
+
+          <li>
+            <a href="#projetos" onClick={closeMenu}>Projetos</a>
+          </li>
+
+          <li>
+            <a href="#contato" onClick={closeMenu}>Contato</a>
+          </li>
 
           <li>
             <button id="btn-tema" onClick={toggleTheme}>
-              <i className="fa-solid fa-moon"></i>
+              <i className={dark ? "fa-solid fa-sun" : "fa-solid fa-moon"}></i>
             </button>
           </li>
         </ul>
 
-        <div id="menu-hamburguer" onClick={toggleMenu}>
-          <i className="fa-solid fa-bars"></i>
+        {/* HAMBURGUER */}
+        <div
+          id="menu-hamburguer"
+          className={menuOpen ? "active" : ""}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     </header>
   );
-}
+} 

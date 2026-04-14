@@ -192,22 +192,7 @@ h2 {
     margin-top: auto;
     padding-bottom: 8px;
 }
-/*
-.btn-github {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    height: 40px; 
-    margin-top: 25px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-*/
+
 .btn-ver-projeto ,
 .btn-github {
     display: flex;
@@ -219,7 +204,6 @@ h2 {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-
     transition: all 0.3s ease;
 }
 
@@ -241,12 +225,6 @@ h2 {
     background-color: #1d4ed8; /* fica mais escuro no hover */
     transform: translateY(-2px);
 }
-
-/*
-.btn-projeto {
-    margin-top: auto;
-}
-*/
 
 form {
     background-color: var(--white);
@@ -538,8 +516,6 @@ body.dark-theme #menu a:hover {
     .botoes-projeto {
         gap: 100px;
     }
-
-
 }
 
 @media (max-width: 450px) {
